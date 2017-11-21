@@ -1,0 +1,12 @@
+{
+  "name": "screeps-ts",
+  "version": "0.0.0",
+  "description": "Screeps-TS",
+  "main": "app.js",
+  "author": {
+    "name": "rhalstea"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.87"
+  }
+}
