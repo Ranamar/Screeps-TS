@@ -2,8 +2,14 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
-    "lib": ["es5"],
-    "sourceMap": true
+    "removeComments": true,
+    "noEmitOnError": true,
+    "noResolve": false,
+    "experimentalDecorators": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "types": [ "lodash", "typed-screeps", "screeps-profiler" ]
   },
   "exclude": [
     "node_modules"
