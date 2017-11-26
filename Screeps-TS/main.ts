@@ -18,13 +18,6 @@ if (Config.USE_PROFILER) {
 }
 
 function mloop() {
-    for (const i in Game.rooms) {
-        const room: Room = Game.rooms[i];
-
-        //CreepManager.run(room);
-        
-
-    }
 
     util.creepGC();
 }

@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>17420bf2-551d-470a-a73c-457515e3042f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.ts</StartupFile>
+    <StartupFile>main.ts</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -32,10 +32,23 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />
+    <TypeScriptCompile Include="creep.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="harvesting.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="main.ts" />
+    <TypeScriptCompile Include="upgrading.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="util.ts" />
+    <TypeScriptCompile Include="worker.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

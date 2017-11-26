@@ -31,53 +31,14 @@ export function createScalingCreep(spawn: Spawn, settings: CreepMemory) {
     spawn.createCreep(largest, null, settings);
 }
 
-function cleanEnergyTracking(room: string, name: string) {
-    var energySources = Memory.rooms[room].energySources;
-    if(!energySources) {
-        //TODO: better fix
-        return;
-    }
-    for(var i = 0; i <energySources.length; i++) {
-        var source = energySources[i];
-        var j = 0;
-        while(j < source.miners.length) {
-            if(source.miners[j] == name) {
-                source.miners.splice(j, 1);
-                console.log('garbage collected', name, 'source', i, 'location', j);
-            }
-            else {
-                j = j+1;
-            }
-        }
-    }
-}
-
-function cleanUpgradeTracking(room: string, name: string) {
-    let upgraders = Memory.rooms[room].upgraders;
-    if(!upgraders) {
-        //TODO: better fix
-        return;
-    }
-    let i = 0;
-    while(i < upgraders.length) {
-        if(upgraders[i] == name) {
-            upgraders.splice(i, 1);
-            console.log('garbage collected', name, 'upgrader: index', i);
-        }
-        else {
-            i = i+1;
-        }
-    }
-}
-
 export function creepGC() {
     for (let name in Memory.creeps) {
         if(!Game.creeps[name]) {
             //Clean up any tracking lists it was on
-            for(var room in Memory.rooms) {
-                cleanEnergyTracking(room, name);
-                cleanUpgradeTracking(room, name);
-            }
+            //for(var room in Memory.rooms) {
+                //cleanEnergyTracking(room, name);
+                //cleanUpgradeTracking(room, name);
+            //}
             delete Memory.creeps[name];
             console.log('Clearing non-existing creep memory:', name);
         }
