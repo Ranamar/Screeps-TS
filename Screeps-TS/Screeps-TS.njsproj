@@ -42,6 +42,9 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="main.ts" />
+    <TypeScriptCompile Include="room.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="upgrading.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
